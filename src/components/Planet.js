@@ -15,7 +15,7 @@ class Planet extends Component {
     }
   }
 
-  componentWillMount() {
+  componentWillReceiveProps() {
     setTimeout(() => {
 
       // Updates states with props

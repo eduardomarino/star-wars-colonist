@@ -72,6 +72,11 @@ class App extends Component {
           terrain={ this.state.terrain }
           featured={ this.state.featured }
         />
+        <p>
+          <button onClick={ this.planetInfo } name='next' type='button'>
+            Next
+          </button>
+        </p>
       </div>
     );
   }
