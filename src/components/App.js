@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Planet from './components/Planet';
+import logo from '../logo.svg';
+import '../App.css';
+import Planet from './Planet';
 
 class App extends Component {
   // Constructor
