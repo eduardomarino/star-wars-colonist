@@ -34,9 +34,9 @@ class Planet extends Component {
     const {name, population, climate, terrain, featured} = this.state;
 
     return (
-      <div>
-        <h1>{ name }</h1>
-        <ul>
+      <div className='planet-board'>
+        <h1 className='planet-name'>{ name }</h1>
+        <ul className='planet-info'>
           <li>Population: { population }</li>
           <li>Climate: { climate }</li>
           <li>Terrain: { terrain }</li>
