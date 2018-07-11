@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import '../App.css';
-import falcon from '../images/falcon.png';
 import Header from './Header';
 import Planet from './Planet';
+import TravelButton from './TravelButton';
 
 class App extends Component {
   // Constructor
@@ -72,17 +72,7 @@ class App extends Component {
           terrain={ this.state.terrain }
           featured={ this.state.featured }
         />
-        <div className='btn-container'>
-          <div className='btn-wrap'>
-            <img
-              onClick={ this.planetInfo }
-              className='btn-image'
-              src={ falcon }
-              alt='Millenium Falcon'
-            />
-            <span className='btn-text'>Next planet</span>
-          </div>
-        </div>
+        <TravelButton />
       </div>
     );
   }
