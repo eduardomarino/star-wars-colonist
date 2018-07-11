@@ -26,7 +26,8 @@ class App extends Component {
   }
 
   /**
-  * @description Fetch The Star Wars API data
+  * @description Fetch The Star Wars API data and play audio
+  * @param {object} audio
   * @param {number} planetNumber
   * @param {template string} url
   * @param {object} response
@@ -34,6 +35,7 @@ class App extends Component {
   * @param {object} error
   */
   planetInfo() {
+    const audio = document.querySelector('audio');
     const planetNumber = Math.floor(Math.random() * 61) + 1;
     const url = `https://swapi.co/api/planets/${planetNumber}`;
 
@@ -56,6 +58,8 @@ class App extends Component {
     .catch(error => {
       console.log(error);
     });
+
+    audio.play();
   }
 
   render() {
@@ -72,7 +76,9 @@ class App extends Component {
           terrain={ this.state.terrain }
           featured={ this.state.featured }
         />
-        <TravelButton />
+        <TravelButton
+          planetInfo={ this.planetInfo }
+        />
       </div>
     );
   }

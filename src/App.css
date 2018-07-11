@@ -64,10 +64,10 @@
 }
 
 .btn-container {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
+  flex-direction: column;
   grid-column: 3 / 4;
-  justify-content: center;
   z-index: 1;
 }
 
@@ -83,6 +83,12 @@
   align-self: flex-end;
   color: #fff;
   font: 1.1rem 'Rajdhani', sans-serif;
+}
+
+.audio {
+  color: #fff;
+  text-align: center;
+  z-index: 1;
 }
 
 @keyframes twinkling {
