@@ -35,8 +35,8 @@ class Planet extends Component {
 
     return (
       <div className='planet-board'>
-        <h2 className='planet-name'>{ name }</h2>
         <ul className='planet-info'>
+          <li className='planet-name'>{ name }</li>
           <li>Population: { population }</li>
           <li>Climate: { climate }</li>
           <li>Terrain: { terrain }</li>
