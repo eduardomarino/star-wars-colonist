@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
-import swLogo from '../images/sw-logo.png';
 import falcon from '../images/falcon.png';
+import Header from './Header';
 import Planet from './Planet';
 
 class App extends Component {
@@ -64,13 +64,7 @@ class App extends Component {
       <div className='wrapper'>
         <div className='stars'></div>
         <div className='twinkle'></div>
-        <header className='header'>
-          <div className='header-title'>
-            <img className='header-logo' src={ swLogo } alt='Star Wars Logo'/>
-            <h1>Colonist</h1>
-          </div>
-          <p className='header-subtitle'>Are you ready for the journey?</p>
-        </header>
+        <Header />
         <Planet
           name={ this.state.name }
           population={ this.state.population }
