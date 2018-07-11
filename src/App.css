@@ -1,28 +1,110 @@
-.App {
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
+@import url(https://fonts.googleapis.com/css?family=Rajdhani);
+
+.wrapper {
+  display: grid;
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap: .5rem;
+  grid-template-columns: repeat(5, 1fr);
+  height: 100vh;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / -1;
+  justify-content: center;
+}
+
+.header-title,
+.header-subtitle {
+  color: #fff;
+  z-index: 1;
+}
+
+.header-title {
+  align-items: baseline;
+  display: inline-flex;
+  font: 2rem 'Orbitron', sans-serif;
+}
+
+.header-logo {
+  margin-right: 10px;
+}
+
+.header-subtitle {
+  font: 1.5rem 'Rajdhani', sans-serif;
+}
+
+.planet-board {
+  color: #fcd000;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Orbitron', sans-serif;
+  grid-column: 2 / 5;
+  justify-content: center;
+  line-height: 2;
+  z-index: 1;
+}
+
+.planet-info {
+  align-self: center;
+  border: 1px solid #fcd000;
+  padding: 30px;
+}
+
+.planet-info > li {
+  list-style: none;
+}
+
+.planet-name {
+  font-size: 1.5rem;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.btn-container {
+  align-items: flex-start;
+  display: flex;
+  grid-column: 3 / 4;
+  justify-content: center;
+  z-index: 1;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.btn-wrap {
+  display: flex;
 }
 
-.App-title {
-  font-size: 1.5em;
+.btn-image {
+  cursor: pointer;
 }
 
-.App-intro {
-  font-size: large;
+.btn-text {
+  align-self: flex-end;
+  color: #fff;
+  font: 1.1rem 'Rajdhani', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes twinkling {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+.stars,
+.twinkle {
+  display: block;
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+
+.stars {
+  background: #000 url(images/stars.png) repeat top center;
+  z-index: 0;
+}
+
+.twinkle {
+  animation: twinkling 200s linear infinite;
+  background: transparent url(images/twinkle.png) repeat top center;
+  z-index: 1;
 }
