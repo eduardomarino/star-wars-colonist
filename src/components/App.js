@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
+import swLogo from '../images/sw-logo.png';
+import falcon from '../images/falcon.png';
 import Planet from './Planet';
 
 class App extends Component {
@@ -57,11 +59,17 @@ class App extends Component {
   }
 
   render() {
-
+    
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Star Wars Colonist</h1>
+      <div className='wrapper'>
+        <div className='stars'></div>
+        <div className='twinkle'></div>
+        <header className='header'>
+          <div className='header-title'>
+            <img className='header-logo' src={ swLogo } alt='Star Wars Logo'/>
+            <h1>Colonist</h1>
+          </div>
+          <p className='header-subtitle'>Are you ready for the journey?</p>
         </header>
         <Planet
           name={ this.state.name }
@@ -70,11 +78,17 @@ class App extends Component {
           terrain={ this.state.terrain }
           featured={ this.state.featured }
         />
-        <p>
-          <button onClick={ this.planetInfo } name='next' type='button'>
-            Next
-          </button>
-        </p>
+        <div className='btn-container'>
+          <div className='btn-wrap'>
+            <img
+              onClick={ this.planetInfo }
+              className='btn-image'
+              src={ falcon }
+              alt='Millenium Falcon'
+            />
+            <span className='btn-text'>Next planet</span>
+          </div>
+        </div>
       </div>
     );
   }
