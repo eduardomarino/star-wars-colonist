@@ -12,13 +12,18 @@ const TravelButton = (props) => {
           onKeyPress={ props.planetInfo }
           className='btn__image'
           src={ falcon }
-          alt='Millenium Falcon'
+          alt='Millennium Falcon'
           role='button'
           tabIndex='0'
         />
         <span className='btn__text'>Next planet</span>
       </div>
-      <audio className='audio' src={ spaceship } type='audio/wav'>
+      <audio
+        className='audio'
+        src={ spaceship }
+        type='audio/wav'
+        aria-label='Millennium Falcon engine'
+      >
         <p>Your browser does not support audio.</p>
       </audio>
     </div>
