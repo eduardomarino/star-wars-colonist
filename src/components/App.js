@@ -33,6 +33,7 @@ class App extends Component {
   * @param {object} response
   * @param {object} planetData
   * @param {object} error
+  * @param {object} message
   */
   planetInfo() {
     const audio = document.querySelector('audio');
@@ -52,6 +53,8 @@ class App extends Component {
     })
     .catch(error => {
       console.log(error);
+      const message = document.querySelector('.main');
+      message.innerHTML = `<p class="error">Sorry, the planet data can't be loaded. Try later!</p>`;
     });
 
     audio.play();

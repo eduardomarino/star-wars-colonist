@@ -66,6 +66,12 @@
 }
 /* --- End planet board --- */
 
+/* Error message for failed fetch*/
+.error {
+  align-self: center;
+  color: #fcd000;
+}
+
 /* Bottom container */
 .bottom-container {
   align-items: center;
