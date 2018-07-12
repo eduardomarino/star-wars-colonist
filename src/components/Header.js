@@ -5,11 +5,11 @@ const Header = (props) => {
 
   return(
     <header className='header'>
-      <div className='header-title'>
-        <img className='header-logo' src={ swLogo } alt='Star Wars Logo'/>
+      <div className='header__title'>
+        <img className='header__logo' src={ swLogo } alt='Star Wars Logo'/>
         <h1>Colonist</h1>
       </div>
-      <p className='header-subtitle'>Are you ready for the journey?</p>
+      <p className='header__subtitle'>Are you ready for the journey?</p>
     </header>
   );
 }

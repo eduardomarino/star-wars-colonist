@@ -60,7 +60,7 @@ class App extends Component {
   render() {
     
     return (
-      <div className='wrapper'>
+      <div className='App'>
         <div className='stars'></div>
         <div className='twinkle'></div>
         <Header />

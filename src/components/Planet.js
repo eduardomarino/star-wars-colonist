@@ -34,15 +34,15 @@ class Planet extends Component {
     const {name, population, climate, terrain, featured} = this.state;
 
     return (
-      <div className='planet-board'>
-        <ul className='planet-info'>
-          <li className='planet-name'>{ name }</li>
+      <main className='main'>
+        <ul className='planet'>
+          <li className='planet__name'>{ name }</li>
           <li>Population: { population }</li>
           <li>Climate: { climate }</li>
           <li>Terrain: { terrain }</li>
           <li>Featured in the films: { featured }</li>
         </ul>
-      </div>
+      </main>
     );
   }
 }
