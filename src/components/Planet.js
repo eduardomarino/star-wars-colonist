@@ -40,7 +40,7 @@ class Planet extends Component {
           <li>Population: { population }</li>
           <li>Climate: { climate }</li>
           <li>Terrain: { terrain }</li>
-          <li>Featured in { featured } films</li>
+          <li>Featured in the films: { featured }</li>
         </ul>
       </div>
     );
