@@ -48,7 +48,7 @@ class App extends Component {
         population: planetData.population,
         climate: planetData.climate,
         terrain: planetData.terrain,
-        featured: planetData.films.length
+        featured: planetData.films.length.toString()
       });
     })
     .catch(error => {

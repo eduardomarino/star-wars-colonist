@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import falcon from '../images/falcon.png';
 import spaceship from '../audio/spaceship.wav';
 
@@ -28,6 +29,10 @@ const TravelButton = (props) => {
       </audio>
     </div>
   );
+}
+
+TravelButton.propTypes = {
+  planetInfo: PropTypes.func.isRequired
 }
 
 export default TravelButton;

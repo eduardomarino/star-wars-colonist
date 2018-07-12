@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Planet extends Component {
   // Constructor
@@ -45,6 +46,14 @@ class Planet extends Component {
       </main>
     );
   }
+}
+
+Planet.propTypes = {
+  name: PropTypes.string.isRequired,
+  population: PropTypes.string.isRequired,
+  climate: PropTypes.string.isRequired,
+  terrain: PropTypes.string.isRequired,
+  featured: PropTypes.string.isRequired
 }
 
 export default Planet;
