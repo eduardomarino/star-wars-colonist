@@ -61,6 +61,8 @@ class App extends Component {
   }
 
   render() {
+
+    const {name, population, climate, terrain, featured} = this.state;
     
     return (
       <div className='App' role='application'>
@@ -68,11 +70,11 @@ class App extends Component {
         <div className='twinkle' role='img' alt='Twinkling stars background'></div>
         <Header />
         <Planet
-          name={ this.state.name }
-          population={ this.state.population }
-          climate={ this.state.climate }
-          terrain={ this.state.terrain }
-          featured={ this.state.featured }
+          name={ name }
+          population={ population }
+          climate={ climate }
+          terrain={ terrain }
+          featured={ featured }
         />
         <TravelButton
           planetInfo={ this.planetInfo }
