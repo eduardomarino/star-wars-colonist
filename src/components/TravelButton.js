@@ -9,9 +9,12 @@ const TravelButton = (props) => {
       <div className='btn'>
         <img
           onClick={ props.planetInfo }
+          onKeyPress={ props.planetInfo }
           className='btn__image'
           src={ falcon }
           alt='Millenium Falcon'
+          role='button'
+          tabIndex='0'
         />
         <span className='btn__text'>Next planet</span>
       </div>

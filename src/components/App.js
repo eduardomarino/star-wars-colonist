@@ -60,9 +60,9 @@ class App extends Component {
   render() {
     
     return (
-      <div className='App'>
-        <div className='stars'></div>
-        <div className='twinkle'></div>
+      <div className='App' role='application'>
+        <div className='stars' role='img' alt='Twinkling stars background'></div>
+        <div className='twinkle' role='img' alt='Twinkling stars background'></div>
         <Header />
         <Planet
           name={ this.state.name }
