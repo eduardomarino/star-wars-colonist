@@ -17,8 +17,9 @@ class App extends Component {
       terrain: '',
       featured: ''
     }
-    // Binding the planetInfo function to this
+    // Binding the functions to this
     this.planetInfo = this.planetInfo.bind(this);
+    this.playAudio = this.playAudio.bind(this);
   }
 
   componentDidMount() {
@@ -26,7 +27,16 @@ class App extends Component {
   }
 
   /**
-  * @description Fetch The Star Wars API data and play audio
+  * @description Play the Millennium Falcon engine
+  * @param {object} audio
+  */
+  playAudio() {
+    const audio = document.querySelector('audio');
+    audio.play();
+  }
+
+  /**
+  * @description Fetch The Star Wars API data and call playAudio function
   * @param {object} audio
   * @param {number} planetNumber
   * @param {template string} url
@@ -36,7 +46,6 @@ class App extends Component {
   * @param {object} message
   */
   planetInfo() {
-    const audio = document.querySelector('audio');
     const planetNumber = Math.floor(Math.random() * 61) + 1;
     const url = `https://swapi.co/api/planets/${planetNumber}`;
 
@@ -57,7 +66,7 @@ class App extends Component {
       message.innerHTML = `<p class="error">Sorry, the planet data can't be loaded. Try later!</p>`;
     });
 
-    audio.play();
+    this.playAudio();
   }
 
   render() {
