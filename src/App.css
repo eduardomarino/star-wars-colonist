@@ -18,6 +18,11 @@
   justify-content: center;
 }
 
+.header__logo {
+  margin-right: 10px;
+  width: 120px;
+}
+
 .header__title,
 .header__subtitle {
   color: #fff;
@@ -28,11 +33,6 @@
   align-items: baseline;
   display: inline-flex;
   font: 1rem 'Orbitron', sans-serif;  
-}
-
-.header__logo {
-  margin-right: 10px;
-  width: 120px;
 }
 
 .header__subtitle {
@@ -136,6 +136,10 @@
 
 /* Media query */
 @media (min-width: 48em) { /* 768px */
+  .header__logo {
+    width: 150px;
+  }
+
   .header__title {
     font-size: 2rem;
   }
