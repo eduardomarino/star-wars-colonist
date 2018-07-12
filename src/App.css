@@ -1,6 +1,8 @@
+/* Fonts */
 @import url(https://fonts.googleapis.com/css?family=Orbitron);
 @import url(https://fonts.googleapis.com/css?family=Rajdhani);
 
+/* Flexbox main wrapper */
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -46,6 +48,11 @@
   z-index: 1;
 }
 
+.planet-name {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
 .planet-info {
   align-self: center;
   border: 1px solid #fcd000;
@@ -54,11 +61,6 @@
   list-style: none;
   padding: 10px;
   text-align: justify;
-}
-
-.planet-name {
-  font-size: 1.3rem;
-  text-align: center;
 }
 
 .btn-container {
@@ -86,12 +88,14 @@
   font: 1.1rem 'Rajdhani', sans-serif;
 }
 
+/* If the audio does not work it shows the message */
 .audio {
   color: #fff;
   padding: 10px;
   z-index: 1;
 }
 
+/* Twinkling stars animation */
 @keyframes twinkling {
   from { background-position: 0 0; }
   to { background-position: -10000px 5000px; }
