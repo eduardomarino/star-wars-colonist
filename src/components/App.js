@@ -49,11 +49,6 @@ class App extends Component {
         terrain: planetData.terrain,
         featured: planetData.films.length
       });
-      console.log(this.state.name);
-      console.log(this.state.population);
-      console.log(this.state.climate);
-      console.log(this.state.terrain);
-      console.log(this.state.featured);
     })
     .catch(error => {
       console.log(error);
