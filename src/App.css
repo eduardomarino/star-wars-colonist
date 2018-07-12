@@ -2,13 +2,14 @@
 @import url(https://fonts.googleapis.com/css?family=Orbitron);
 @import url(https://fonts.googleapis.com/css?family=Rajdhani);
 
-/* Flexbox main wrapper */
-.wrapper {
+/* App container */
+.App {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* Start header */
 .header {
   align-items: center;
   display: flex;
@@ -17,53 +18,56 @@
   justify-content: center;
 }
 
-.header-title,
-.header-subtitle {
+.header__title,
+.header__subtitle {
   color: #fff;
   z-index: 1;
 }
 
-.header-title {
+.header__title {
   align-items: baseline;
   display: inline-flex;
   font: 1rem 'Orbitron', sans-serif;  
 }
 
-.header-logo {
+.header__logo {
   margin-right: 10px;
   width: 120px;
 }
 
-.header-subtitle {
+.header__subtitle {
   font: 1.2rem 'Rajdhani', sans-serif;
 }
+/* --- End header --- */
 
-.planet-board {
-  color: #fcd000;
+/* Main */
+.main {
   display: flex;
   flex: 1;
-  font-family: 'Orbitron', sans-serif;
   justify-content: center;
-  line-height: 2;
   z-index: 1;
 }
 
-.planet-name {
-  font-size: 1.3rem;
-  text-align: center;
-}
-
-.planet-info {
+/* Start planet board */
+.planet {
   align-self: center;
   border: 1px solid #fcd000;
-  flex-wrap: wrap;
-  font-size: .8rem;
+  color: #fcd000;
+  font: .8rem 'Orbitron', sans-serif;
+  line-height: 2;
   list-style: none;
   padding: 10px;
   text-align: justify;
 }
 
-.btn-container {
+.planet__name {
+  font-size: 1.3rem;
+  text-align: center;
+}
+/* --- End planet board --- */
+
+/* Bottom container */
+.bottom-container {
   align-items: center;
   display: flex;
   flex-basis: 25vh;
@@ -72,21 +76,23 @@
   z-index: 1;
 }
 
-.btn-wrap {
+/* Start button */
+.btn {
   display: flex;
   padding: 10px;
 }
 
-.btn-image {
+.btn__image {
   cursor: pointer;
   height: 50px;
 }
 
-.btn-text {
+.btn__text {
   align-self: flex-end;
   color: #fff;
   font: 1.1rem 'Rajdhani', sans-serif;
 }
+/* --- End button --- */
 
 /* If the audio does not work it shows the message */
 .audio {
@@ -101,6 +107,7 @@
   to { background-position: -10000px 5000px; }
 }
 
+/* Start stars and twinkle backgrounds */
 .stars,
 .twinkle {
   display: block;
@@ -119,31 +126,32 @@
   background: transparent url(images/twinkle.png) repeat top center;
   z-index: 1;
 }
+/* --- End stars and twinkle backgrounds --- */
 
 /* Media query */
 @media (min-width: 48em) { /* 768px */
-  .header-title {
+  .header__title {
     font-size: 2rem;
   }
 
-  .header-subtitle {
+  .header__subtitle {
     font-size: 1.5rem;
   }
 
-  .planet-name {
-    font-size: 1.5rem;
-  }
-
-  .planet-info {
+  .planet {
     font-size: 1rem;
     padding: 30px;
   }
 
-  .btn-wrap {
+  .planet__name {
+    font-size: 1.5rem;
+  }
+
+  .btn {
     padding: 0;
   }
 
-  .btn-image {
+  .btn__image {
     height: 60px;
   }
 }
