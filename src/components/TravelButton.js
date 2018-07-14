@@ -8,7 +8,7 @@ class TravelButton extends Component {
   constructor(props) {
     super(props);
 
-    // Binding the shipClicked to this
+    // Binding the function to this
     this.shipClicked = this.shipClicked.bind(this);
   }
 
