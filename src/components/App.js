@@ -74,7 +74,7 @@ class App extends Component {
     const {name, population, climate, terrain, featured} = this.state;
     
     return (
-      <div className='App' role='application'>
+      <div className='App'>
         <div className='stars' role='img' alt='Twinkling stars background'></div>
         <div className='twinkle' role='img' alt='Twinkling stars background'></div>
         <Header />
