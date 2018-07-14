@@ -13,14 +13,14 @@
 .header {
   align-items: center;
   display: flex;
-  flex-basis: 30vh;
+  flex-basis: 200px;
   flex-direction: column;
   justify-content: center;
 }
 
 .header__logo {
   margin-right: 10px;
-  width: 120px;
+  width: 110px;
 }
 
 .header__title,
@@ -32,11 +32,11 @@
 .header__title {
   align-items: baseline;
   display: inline-flex;
-  font: 1rem 'Orbitron', sans-serif;  
+  font: .9rem 'Orbitron', sans-serif;  
 }
 
 .header__subtitle {
-  font: 1.2rem 'Rajdhani', sans-serif;
+  font: 1.1rem 'Rajdhani', sans-serif;
 }
 /* --- End header --- */
 
@@ -52,11 +52,12 @@
 .planet {
   align-self: center;
   border: 1px solid #fcd000;
+  border-radius: 10px;
   color: #fcd000;
-  font: .8rem 'Orbitron', sans-serif;
+  font: .7rem 'Orbitron', sans-serif;
   line-height: 2;
   list-style: none;
-  padding: 10px;
+  padding: 5px;
   text-align: justify;
 }
 
@@ -76,27 +77,34 @@
 .bottom-container {
   align-items: center;
   display: flex;
-  flex-basis: 25vh;
+  flex-basis: 200px;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   z-index: 1;
 }
 
 /* Start button */
 .btn {
   display: flex;
-  padding: 10px;
 }
 
 .btn__image {
+  border-radius: 10px;
+  border: 1px solid transparent;
   cursor: pointer;
   height: 50px;
+  margin-right: 5px;
+  outline: none !important;
+}
+
+.btn__image:focus {
+  border-color: #fff;
 }
 
 .btn__text {
   align-self: flex-end;
   color: #fff;
-  font: 1.1rem 'Rajdhani', sans-serif;
+  font: 1rem 'Rajdhani', sans-serif;
 }
 /* --- End button --- */
 
@@ -118,8 +126,8 @@
 .twinkle {
   display: block;
   min-height: 100vh;
-  position: absolute;
-  width: 100%;
+  position: fixed;
+  width: 100vw;
 }
 
 .stars {
@@ -155,10 +163,6 @@
 
   .planet__name {
     font-size: 1.5rem;
-  }
-
-  .btn {
-    padding: 0;
   }
 
   .btn__image {
