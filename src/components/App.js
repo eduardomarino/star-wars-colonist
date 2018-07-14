@@ -65,13 +65,12 @@ class App extends Component {
       const message = document.querySelector('.main');
       message.innerHTML = `<p class="error">Sorry, the planet data can't be loaded. Try later!</p>`;
     });
-
-    this.playAudio();
   }
 
   render() {
 
     const {name, population, climate, terrain, featured} = this.state;
+    const { planetInfo, playAudio } = this;
     
     return (
       <div className='App'>
@@ -86,7 +85,8 @@ class App extends Component {
           featured={ featured }
         />
         <TravelButton
-          planetInfo={ this.planetInfo }
+          planetInfo={ planetInfo }
+          playAudio={ playAudio }
         />
       </div>
     );
