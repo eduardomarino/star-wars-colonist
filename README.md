@@ -1,5 +1,5 @@
 # Star Wars Colonist
-This project was developed for the challenge of [B2W Digital](http://somos.b2wdigital.com/).
+This project was developed for the challenge of [BIT](http://somos.b2wdigital.com/bit/) (B2W Digital).
 
 Built with: HTML, CSS, JavaScript, React and API usage.
 
@@ -17,6 +17,9 @@ Built with: HTML, CSS, JavaScript, React and API usage.
 - To create a production build use `npm run build`
 - Navigate to the build directory and start the server with `npm run deploy`
 - This mode includes a Service Worker.
+
+### Load on GitHub Pages
+- [Star Wars Colonist](https://eduardomr.github.io/star-wars-colonist/)
 
 ## Resources:
 - [The Star Wars API](https://swapi.co/)
