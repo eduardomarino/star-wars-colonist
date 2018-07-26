@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import falcon from '../images/falcon.png';
-import spaceship from '../audio/spaceship.wav';
+import falcon from '../assets/images/falcon.png';
+import spaceship from '../assets/audios/spaceship.wav';
 
 class TravelButton extends Component {
   // Constructor

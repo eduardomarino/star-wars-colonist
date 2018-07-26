@@ -131,13 +131,13 @@
 }
 
 .stars {
-  background: #000 url(images/stars.png) repeat top center;
+  background: #000 url(../images/stars.png) repeat top center;
   z-index: 0;
 }
 
 .twinkle {
   animation: twinkling 200s linear infinite;
-  background: transparent url(images/twinkle.png) repeat top center;
+  background: transparent url(../images/twinkle.png) repeat top center;
   z-index: 1;
 }
 /* --- End stars and twinkle backgrounds --- */

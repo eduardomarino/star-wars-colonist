@@ -1,5 +1,5 @@
 import React from 'react';
-import swLogo from '../images/sw-logo.png';
+import swLogo from '../assets/images/sw-logo.png';
 
 const Header = (props) => {
 

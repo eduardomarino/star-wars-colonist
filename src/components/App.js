@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
+import '../assets/stylesheets/App.css';
 import Header from './Header';
 import Planet from './Planet';
 import TravelButton from './TravelButton';
