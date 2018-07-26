@@ -36,7 +36,7 @@ class App extends Component {
   }
 
   /**
-  * @description Fetch The Star Wars API data and call playAudio function
+  * @description Fetch The Star Wars API data
   * @param {object} audio
   * @param {number} planetNumber
   * @param {template string} url
