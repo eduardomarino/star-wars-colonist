@@ -4,18 +4,11 @@ import falcon from '../assets/images/falcon.png';
 import spaceship from '../assets/audios/spaceship.wav';
 
 class TravelButton extends Component {
-  // Constructor
-  constructor(props) {
-    super(props);
-
-    // Binding the function to this
-    this.shipClicked = this.shipClicked.bind(this);
-  }
 
   /**
   * @description Call props
   */
-  shipClicked() {
+  shipClicked = () => {
     this.props.planetInfo();
     this.props.playAudio();
   }

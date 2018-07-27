@@ -2,18 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Planet extends Component {
-  // Constructor
-  constructor(props) {
-    super(props);
 
-    // States
-    this.state = {
-      name: '',
-      population: '',
-      climate: '',
-      terrain: '',
-      featured: ''
-    }
+  state = {
+    name: '',
+    population: '',
+    climate: '',
+    terrain: '',
+    featured: ''
   }
 
   componentWillReceiveProps() {

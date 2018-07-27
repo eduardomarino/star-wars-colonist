@@ -5,21 +5,14 @@ import Planet from './Planet';
 import TravelButton from './TravelButton';
 
 class App extends Component {
-  // Constructor
-  constructor(props) {
-    super(props);
 
-    // Initial states
-    this.state = {
-      name: '',
-      population: '',
-      climate: '',
-      terrain: '',
-      featured: ''
-    }
-    // Binding the functions to this
-    this.planetInfo = this.planetInfo.bind(this);
-    this.playAudio = this.playAudio.bind(this);
+  // Initial states
+  state = {
+    name: '',
+    population: '',
+    climate: '',
+    terrain: '',
+    featured: ''
   }
 
   componentDidMount() {
@@ -30,7 +23,7 @@ class App extends Component {
   * @description Play the Millennium Falcon engine
   * @param {object} audio
   */
-  playAudio() {
+  playAudio = () => {
     const audio = document.querySelector('audio');
     audio.play();
   }
@@ -45,7 +38,7 @@ class App extends Component {
   * @param {object} error
   * @param {object} message
   */
-  planetInfo() {
+  planetInfo = () => {
     const planetNumber = Math.floor(Math.random() * 61) + 1;
     const url = `https://swapi.co/api/planets/${planetNumber}`;
 
