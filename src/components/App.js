@@ -43,7 +43,7 @@ export default class App extends Component {
     .catch(error => {
       console.log(error)
       const message = document.querySelector('.main')
-      message.innerHTML = `<p class="error">Sorry, the planet data can't be loaded. Try later!</p>`
+      message.innerHTML = `<p class='error'>Sorry, the planet data can't be loaded. Try later!</p>`
     })
   }
 
