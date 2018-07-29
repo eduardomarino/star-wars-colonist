@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import '../assets/stylesheets/App.css';
-import Header from './Header';
-import Planet from './Planet';
-import TravelButton from './TravelButton';
+import React, { Component } from 'react'
+import '../assets/styles/App.css'
+import Header from './Header'
+import Planet from './Planet'
+import TravelButton from './TravelButton'
 
-class App extends Component {
+export default class App extends Component {
 
-  // Initial states
   state = {
     name: '',
     population: '',
@@ -16,31 +15,19 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.planetInfo();
+    this.planetInfo()
   }
 
-  /**
-  * @description Play the Millennium Falcon engine
-  * @param {object} audio
-  */
+  // Play the Millennium Falcon engine 
   playAudio = () => {
-    const audio = document.querySelector('audio');
-    audio.play();
+    const audio = document.querySelector('audio')
+    audio.play()
   }
 
-  /**
-  * @description Fetch The Star Wars API data
-  * @param {object} audio
-  * @param {number} planetNumber
-  * @param {template string} url
-  * @param {object} response
-  * @param {object} planetData
-  * @param {object} error
-  * @param {object} message
-  */
+  // Fetch The Star Wars API data
   planetInfo = () => {
-    const planetNumber = Math.floor(Math.random() * 61) + 1;
-    const url = `https://swapi.co/api/planets/${planetNumber}`;
+    const planetNumber = Math.floor(Math.random() * 61) + 1
+    const url = `https://swapi.co/api/planets/${planetNumber}`
 
     fetch(url)
     .then(response => response.json())
@@ -51,19 +38,19 @@ class App extends Component {
         climate: planetData.climate,
         terrain: planetData.terrain,
         featured: planetData.films.length.toString()
-      });
+      })
     })
     .catch(error => {
-      console.log(error);
-      const message = document.querySelector('.main');
-      message.innerHTML = `<p class="error">Sorry, the planet data can't be loaded. Try later!</p>`;
-    });
+      console.log(error)
+      const message = document.querySelector('.main')
+      message.innerHTML = `<p class="error">Sorry, the planet data can't be loaded. Try later!</p>`
+    })
   }
 
   render() {
 
-    const {name, population, climate, terrain, featured} = this.state;
-    const { planetInfo, playAudio } = this;
+    const {name, population, climate, terrain, featured} = this.state
+    const { planetInfo, playAudio } = this
     
     return (
       <div className='App'>
@@ -82,8 +69,6 @@ class App extends Component {
           playAudio={ playAudio }
         />
       </div>
-    );
+    )
   }
 }
-
-export default App;

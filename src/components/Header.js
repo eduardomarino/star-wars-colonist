@@ -1,9 +1,9 @@
-import React from 'react';
-import swLogo from '../assets/images/sw-logo.png';
+import React from 'react'
+import swLogo from '../assets/images/sw-logo.png'
 
-const Header = (props) => {
+const Header = () => {
 
-  return(
+  return (
     <header className='header'>
       <div className='header__title'>
         <img className='header__logo' src={ swLogo } alt='Star Wars Logo'/>
@@ -11,7 +11,7 @@ const Header = (props) => {
       </div>
       <p className='header__subtitle'>Are you ready for the journey?</p>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header

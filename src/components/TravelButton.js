@@ -1,21 +1,24 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import falcon from '../assets/images/falcon.png';
-import spaceship from '../assets/audios/spaceship.wav';
+import React, { Component } from 'react'
+import { func } from 'prop-types'
+import falcon from '../assets/images/falcon.png'
+import spaceship from '../assets/audios/spaceship.wav'
 
-class TravelButton extends Component {
+export default class TravelButton extends Component {
 
-  /**
-  * @description Call props
-  */
+  static propTypes = {
+    planetInfo: func.isRequired,
+    playAudio: func.isRequired
+  }
+
+  // Fetch the API data and play audio when the ship is clicked
   shipClicked = () => {
-    this.props.planetInfo();
-    this.props.playAudio();
+    this.props.planetInfo()
+    this.props.playAudio()
   }
 
   render() {
 
-    const { shipClicked } = this;
+    const { shipClicked } = this
 
     return (
       <div className='bottom-container'>
@@ -40,13 +43,6 @@ class TravelButton extends Component {
           <p>Your browser does not support audio.</p>
         </audio>
       </div>
-    );
+    )
   }
 }
-
-TravelButton.propTypes = {
-  planetInfo: PropTypes.func.isRequired,
-  playAudio: PropTypes.func.isRequired
-}
-
-export default TravelButton;

@@ -1,54 +1,27 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import { string } from 'prop-types'
 
-class Planet extends Component {
+const Planet = (props) => {
 
-  state = {
-    name: '',
-    population: '',
-    climate: '',
-    terrain: '',
-    featured: ''
-  }
-
-  componentWillReceiveProps() {
-    setTimeout(() => {
-
-      // Updates states with props
-      this.setState({
-        name: this.props.name,
-        population: this.props.population,
-        climate: this.props.climate,
-        terrain: this.props.terrain,
-        featured: this.props.featured
-      });
-    }, 1000);
-  }
-
-  render() {
-
-    const {name, population, climate, terrain, featured} = this.state;
-
-    return (
-      <main className='main'>
-        <ul className='planet'>
-          <li className='planet__name'>{ name }</li>
-          <li>Population: { population }</li>
-          <li>Climate: { climate }</li>
-          <li>Terrain: { terrain }</li>
-          <li>Featured in the films: { featured }</li>
-        </ul>
-      </main>
-    );
-  }
+  return (
+    <main className='main'>
+      <ul className='planet'>
+        <li className='planet__name'>{ props.name }</li>
+        <li>Population: { props.population }</li>
+        <li>Climate: { props.climate }</li>
+        <li>Terrain: { props.terrain }</li>
+        <li>Featured in the films: { props.featured }</li>
+      </ul>
+    </main>
+  )
 }
 
 Planet.propTypes = {
-  name: PropTypes.string.isRequired,
-  population: PropTypes.string.isRequired,
-  climate: PropTypes.string.isRequired,
-  terrain: PropTypes.string.isRequired,
-  featured: PropTypes.string.isRequired
+  name: string.isRequired,
+  population: string.isRequired,
+  climate: string.isRequired,
+  terrain: string.isRequired,
+  featured: string.isRequired
 }
 
-export default Planet;
+export default Planet
