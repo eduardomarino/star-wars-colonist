@@ -17,17 +17,14 @@ export default class TravelButton extends Component {
   }
 
   render() {
-
-    const { shipClicked } = this
-
     return (
       <div className='bottom-container'>
         <div className='btn'>
           <img
-            onClick={ shipClicked }
-            onKeyPress={ shipClicked }
+            onClick={this.shipClicked}
+            onKeyPress={this.shipClicked}
             className='btn__image'
-            src={ falcon }
+            src={falcon}
             alt='Millennium Falcon'
             role='button'
             tabIndex='0'
@@ -36,10 +33,9 @@ export default class TravelButton extends Component {
         </div>
         <audio
           className='audio'
-          src={ spaceship }
+          src={spaceship}
           type='audio/wav'
-          aria-label='Millennium Falcon engine'
-        >
+          aria-label='Millennium Falcon engine'>
           <p>Your browser does not support audio.</p>
         </audio>
       </div>

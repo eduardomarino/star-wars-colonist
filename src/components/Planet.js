@@ -1,20 +1,17 @@
 import React from 'react'
 import { string } from 'prop-types'
 
-const Planet = (props) => {
-
-  return (
-    <main className='main'>
-      <ul className='planet'>
-        <li className='planet__name'>{ props.name }</li>
-        <li>Population: { props.population }</li>
-        <li>Climate: { props.climate }</li>
-        <li>Terrain: { props.terrain }</li>
-        <li>Featured in the films: { props.featured }</li>
-      </ul>
-    </main>
-  )
-}
+const Planet = (props) => (
+  <main className='main'>
+    <ul className='planet'>
+      <li className='planet__name'>{props.name}</li>
+      <li>Population: {props.population}</li>
+      <li>Climate: {props.climate}</li>
+      <li>Terrain: {props.terrain}</li>
+      <li>Featured in the films: {props.featured}</li>
+    </ul>
+  </main>
+)
 
 Planet.propTypes = {
   name: string.isRequired,
