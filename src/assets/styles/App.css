@@ -13,7 +13,7 @@
 .header {
   align-items: center;
   display: flex;
-  flex-basis: 200px;
+  height: 200px;
   flex-direction: column;
   justify-content: center;
 }
@@ -67,7 +67,7 @@
 }
 /* --- End planet board --- */
 
-/* Error message for failed fetch*/
+/* Error message for failed fetch */
 .error {
   align-self: center;
   color: #fcd000;
@@ -78,7 +78,7 @@
 .bottom-container {
   align-items: center;
   display: flex;
-  flex-basis: 200px;
+  height: 200px;
   flex-direction: column;
   justify-content: center;
   z-index: 1;
@@ -95,7 +95,7 @@
   cursor: pointer;
   height: 50px;
   margin-right: 5px;
-  outline: none !important;
+  outline: none;
 }
 
 .btn__image:focus {
