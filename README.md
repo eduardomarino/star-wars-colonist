@@ -19,7 +19,7 @@ Built with: HTML, CSS, JavaScript, React and API usage.
 - This mode includes a Service Worker.
 
 ### Load on GitHub Pages
-- [Star Wars Colonist](https://eduardomr.github.io/star-wars-colonist/)
+- [Star Wars Colonist](https://eduardomarino.github.io/star-wars-colonist/)
 
 ## Resources:
 - [The Star Wars API](https://swapi.co/)

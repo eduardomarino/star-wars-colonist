@@ -2,7 +2,7 @@
   "name": "star-wars-colonist",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://eduardomr.github.io/star-wars-colonist/",
+  "homepage": "https://eduardomarino.github.io/star-wars-colonist/",
   "dependencies": {
     "gh-pages": "^1.2.0",
     "prop-types": "^15.6.2",
