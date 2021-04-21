@@ -15,19 +15,17 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    this.planetInfo()
+    this.getPlanet()
   }
 
-  // Play the Millennium Falcon engine 
   playAudio = () => {
     const audio = document.querySelector('audio')
     audio.play()
   }
 
-  // Fetch The Star Wars API data
-  planetInfo = () => {
+  getPlanet = () => {
     const planetNumber = Math.floor(Math.random() * 61) + 1
-    const url = `https://swapi.co/api/planets/${planetNumber}`
+    const url = `https://swapi.dev/api/planets/${planetNumber}`
     
     fetch(url)
       .then(response => response.json())
@@ -62,7 +60,7 @@ export default class App extends Component {
           featured={featured}
         />
         <TravelButton
-          planetInfo={this.planetInfo}
+          getPlanet={this.getPlanet}
           playAudio={this.playAudio}
         />
       </div>

@@ -6,13 +6,12 @@ import spaceship from '../assets/audios/spaceship.wav'
 export default class TravelButton extends Component {
 
   static propTypes = {
-    planetInfo: func.isRequired,
+    getPlanet: func.isRequired,
     playAudio: func.isRequired
   }
 
-  // Fetch the API data and play audio when the ship is clicked
-  shipClicked = () => {
-    this.props.planetInfo()
+  handleButton = () => {
+    this.props.getPlanet()
     this.props.playAudio()
   }
 
@@ -21,8 +20,8 @@ export default class TravelButton extends Component {
       <div className='bottom-container'>
         <div className='btn'>
           <img
-            onClick={this.shipClicked}
-            onKeyPress={this.shipClicked}
+            onClick={this.handleButton}
+            onKeyPress={this.handleButton}
             className='btn__image'
             src={falcon}
             alt='Millennium Falcon'
