@@ -22,7 +22,7 @@ Built with: HTML, CSS, JavaScript, React and API usage.
 - [Star Wars Colonist](https://eduardomarino.github.io/star-wars-colonist/)
 
 ## Resources:
-- [The Star Wars API](https://swapi.co/)
+- [The Star Wars API](https://swapi.dev/)
 - [Create-react-app](https://github.com/facebook/create-react-app)
 - [Iconscout](https://iconscout.com/)
 - [Freesound](https://freesound.org/)
