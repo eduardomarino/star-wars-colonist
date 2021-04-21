@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import '../assets/styles/App.css'
-import Header from './Header'
-import Planet from './Planet'
-import TravelButton from './TravelButton'
+import './assets/styles/App.css'
+import Header from './components/Header'
+import Planet from './components/Planet'
+import TravelButton from './components/TravelButton'
 
 export default class App extends Component {
 
