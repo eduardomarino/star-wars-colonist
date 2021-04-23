@@ -10,7 +10,7 @@ export default class TravelButton extends Component {
     playAudio: func.isRequired
   }
 
-  handleButton = () => {
+  getNextPlanet = () => {
     this.props.getPlanet()
     this.props.playAudio()
   }
@@ -20,8 +20,8 @@ export default class TravelButton extends Component {
       <div className='bottom-container'>
         <div className='btn'>
           <img
-            onClick={this.handleButton}
-            onKeyPress={this.handleButton}
+            onClick={this.getNextPlanet}
+            onKeyPress={this.getNextPlanet}
             className='btn__image'
             src={falcon}
             alt='Millennium Falcon'
